@@ -80,7 +80,7 @@ class TemplateUtility extends AbstractUtility
             }
         }
         if ($returnAllPaths || empty($templatePaths)) {
-            $templatePaths[] = 'EXT:femanager/Resources/Private/' . ucfirst($part) . 's/';
+            array_unshift($templatePaths, 'EXT:femanager/Resources/Private/' . ucfirst($part) . 's/');
         }
         $templatePaths = array_unique($templatePaths);
         $absolutePaths = [];
